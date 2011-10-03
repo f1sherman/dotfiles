@@ -1,0 +1,2 @@
+" bind control-l to hashrocket
+imap <C-l> <Space>=><Space>"
