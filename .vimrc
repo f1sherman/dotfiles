@@ -2,12 +2,14 @@
 
 imap <C-l> <Space>=><Space> 	" bind control-l to hashrocket
 
-map <C-h> <C-w>h 		" easier moving between windows
+" easier moving between windows
+map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
-map <D-F> :Ack 			" command-shift-f to bring up Ack.vim
+" command-shift-f to bring up Ack.vim
+map <D-F> :Ack 
 
 set nocompatible                " choose no compatibility with legacy vi
 syntax enable
