@@ -3,10 +3,10 @@ if has("gui_running")
   set guioptions=egmrt
 endif
 
-" map command-t to command-t
+" map command-t to command-T
 if has("gui_macvim")
-  macmenu &File.New\ Tab key=<nop>
-  map <D-t> :CommandT<CR>
+  macmenu &File.Open\ Tab\.\.\. key=<nop>
+  map <D-T> :CommandT<CR>
 endif
 
 let g:CommandTMaxHeight=15
