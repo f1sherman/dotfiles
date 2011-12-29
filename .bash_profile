@@ -1,6 +1,6 @@
-export PATH=/usr/local/bin:/opt/local/bin:/opt/local/sbin:$PATH
 export EDITOR=mvim
 export ELASTICSEARCH_HOST=localhost:9200
+export CC=gcc-4.2
 source ~/.git-completion.sh
 source ~/.git-bash-prompt.sh
 
@@ -11,7 +11,4 @@ export RUBY_HEAP_SLOTS_GROWTH_FACTOR=1
 export RUBY_GC_MALLOC_LIMIT=1000000000
 export RUBY_HEAP_FREE_MIN=500000
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
-
-alias pc='pry -r config/environment'
-[ -f ~/.bundler-exec.sh ] && source ~/.bundler-exec.sh
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # add rvm to the path if it exists (this should be last)
