@@ -16,9 +16,11 @@ syntax enable
 set encoding=utf-8
 set showcmd                     " display incomplete commands
 filetype plugin indent on       " load file type plugins + indentation
+set number                      " show line numbers
 
 "" Whitespace
-set nowrap                      " don't wrap lines
+set wrap                        " wrap lines
+set linebreak                   " don't break words
 set tabstop=2 shiftwidth=2      " a tab is two spaces
 set expandtab                   " use spaces, not tabs
 set backspace=indent,eol,start  " backspace through everything in insert mode
