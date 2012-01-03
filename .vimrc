@@ -1,6 +1,7 @@
 :colorscheme ir_black		" make vim easy on the eyes
 
-imap <C-l> <Space>=><Space> 	" bind control-l to hashrocket
+" bind control-l to hashrocket
+imap <C-l> <Space>=><Space>
 
 " easier moving between windows
 map <C-h> <C-w>h
