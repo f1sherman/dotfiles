@@ -11,4 +11,8 @@ export RUBY_HEAP_SLOTS_GROWTH_FACTOR=1
 export RUBY_GC_MALLOC_LIMIT=1000000000
 export RUBY_HEAP_FREE_MIN=500000
 
+if [[ -f "$HOME/.amazon_keys" ]]; then
+  source "$HOME/.amazon_keys";
+fi
+
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # add rvm to the path if it exists (this should be last)
