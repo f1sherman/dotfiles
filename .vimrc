@@ -23,6 +23,7 @@ set number                      " show line numbers
 set wrap                        " wrap lines
 set linebreak                   " don't break words
 set tabstop=2 shiftwidth=2      " a tab is two spaces
+set softtabstop=2               " backspace 2 spaces at a time
 set expandtab                   " use spaces, not tabs
 set backspace=indent,eol,start  " backspace through everything in insert mode
 
