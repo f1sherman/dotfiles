@@ -10,7 +10,10 @@ map <C-k> <C-w>k
 map <C-l> <C-w>l
 
 " command-shift-f to bring up Ack.vim
-map <D-F> :Ack 
+map <D-F> :Ack<space>
+
+" command-/ to comment/uncomment lines
+map <D-/> \c<space>
 
 set nocompatible                " choose no compatibility with legacy vi
 syntax enable
