@@ -1,8 +1,8 @@
-export EDITOR=mvim
+export EDITOR=mvim # use macvim to edit files
 export ELASTICSEARCH_HOST=localhost:9200
-export CC=gcc-4.2
-source ~/.git-completion.sh
-source ~/.git-bash-prompt.sh
+export CC=gcc-4.2 # use non-broken gcc for lion
+[[ -f ~/.git-completion.sh ]] && source ~/.git-completion.sh
+[[ -f ~/.git-bash-prompt.sh ]] && source ~/.git-bash-prompt.sh
 
 # speed up rails tests
 export RUBY_HEAP_MIN_SLOTS=1000000
