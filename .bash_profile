@@ -15,4 +15,6 @@ if [[ -f "$HOME/.amazon_keys" ]]; then
   source "$HOME/.amazon_keys";
 fi
 
+[ -f ~/.bundler-exec.sh ] && source ~/.bundler-exec.sh # prepend commands with 'bundle exec' when appropriate
+
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # add rvm to the path if it exists (this should be last)
