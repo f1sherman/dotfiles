@@ -1,5 +1,5 @@
 export EDITOR=mvim # use macvim to edit files
-export ELASTICSEARCH_HOST=localhost:9200
+export ELASTICSEARCH_HOST=127.0.0.1:9200 # run tests against local elasticsearch index
 export CC=gcc-4.2 # use non-broken gcc for lion
 [[ -f ~/.git-completion.sh ]] && source ~/.git-completion.sh
 [[ -f ~/.git-bash-prompt.sh ]] && source ~/.git-bash-prompt.sh
@@ -10,10 +10,6 @@ export RUBY_HEAP_SLOTS_INCREMENT=1000000
 export RUBY_HEAP_SLOTS_GROWTH_FACTOR=1
 export RUBY_GC_MALLOC_LIMIT=1000000000
 export RUBY_HEAP_FREE_MIN=500000
-
-if [[ -f "$HOME/.amazon_keys" ]]; then
-  source "$HOME/.amazon_keys";
-fi
 
 [ -f ~/.bundler-exec.sh ] && source ~/.bundler-exec.sh # prepend commands with 'bundle exec' when appropriate
 
