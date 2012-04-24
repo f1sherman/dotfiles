@@ -1,1 +1,7 @@
 My dotfiles
+
+To install:
+git clone git@github.com:f1sherman/dotfiles.git
+rake install
+
+Can also optionally set many helpful OS X defaults by exec-ing osx/set-defaults.sh.
