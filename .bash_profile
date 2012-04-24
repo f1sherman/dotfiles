@@ -1,5 +1,5 @@
 export EDITOR=mvim # use macvim to edit files
-export ELASTICSEARCH_HOST=localhost:9200
+export ELASTICSEARCH_HOST=127.0.0.1:9200 # run tests against local elasticsearch index
 export CC=gcc-4.2 # use non-broken gcc for lion
 [[ -f ~/.git-completion.sh ]] && source ~/.git-completion.sh
 [[ -f ~/.git-bash-prompt.sh ]] && source ~/.git-bash-prompt.sh
