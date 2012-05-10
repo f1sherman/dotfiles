@@ -1,5 +1,6 @@
 export EDITOR=mvim # use macvim to edit files
 export ELASTICSEARCH_HOST=127.0.0.1:9200 # run tests against local elasticsearch index
+
 export CC=gcc-4.2 # use non-broken gcc for lion
 [[ -f ~/.git-completion.sh ]] && source ~/.git-completion.sh
 [[ -f ~/.git-bash-prompt.sh ]] && source ~/.git-bash-prompt.sh
@@ -37,6 +38,11 @@ fi
 
 # Autocorrect typos in path names when using `cd`
 shopt -s cdspell
+
+# Load any machine-specific customizations
+if [ -f ~/.bash_profile.local ]; then
+  . ~/.bash_profile.local
+fi
 
 [ -f ~/.bundler-exec.sh ] && source ~/.bundler-exec.sh # prepend commands with 'bundle exec' when appropriate
 
