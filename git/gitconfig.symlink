@@ -1,6 +1,8 @@
 [user]
 	name = Brian John
 	email = brian@brianjohn.com
+[core]
+  excludesfile = ~/.gitignore
 [merge]
   tool = vimdiff
 	conflictstyle = diff3
