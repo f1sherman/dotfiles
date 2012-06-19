@@ -1,6 +1,8 @@
 [user]
 	name = Brian John
 	email = brian@brianjohn.com
+[github]
+  user = f1sherman
 [core]
   excludesfile = ~/.gitignore
 [merge]
