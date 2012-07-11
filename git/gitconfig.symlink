@@ -19,6 +19,7 @@
 [diff]
 	renames = copy
 	tool = vimdiff
+  guitool = mvimdiff
 [status]
 	showUntrackedFiles = all
 [alias]
@@ -34,3 +35,5 @@
   publish = !BRANCH=$(git branch | grep \\* | awk '{print $2}') && git push -u origin $BRANCH
 [difftool]
 	prompt = false
+[difftool "mvimdiff"]
+  cmd = mvim -d --nofork -R -o $LOCAL $REMOTE
