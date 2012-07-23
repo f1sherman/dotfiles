@@ -1,2 +1,3 @@
 .sass-cache
 *.un~
+config/jshint.yml
