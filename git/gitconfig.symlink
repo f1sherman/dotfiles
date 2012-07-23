@@ -5,6 +5,7 @@
   user = f1sherman
 [core]
   excludesfile = ~/.gitignore
+	editor = mvim -f --nomru -c \"au VimLeave * !open -a iTerm\"
 [merge]
   tool = vimdiff
 	conflictstyle = diff3
@@ -15,7 +16,6 @@
 	diff = auto
 	status = auto
 	ui = auto
-	editor = mvim
 [diff]
 	renames = copy
 	tool = vimdiff
