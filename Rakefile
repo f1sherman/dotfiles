@@ -55,6 +55,12 @@ task :install do
     end
     `ln -s "$PWD/#{linkable}" "#{target}"`
   end
+  
+  # Added by Brian - setup symlinks for bashrc_dispatch
+  `ln -s "$HOME/.bashrc_dispatch" "$HOME/.bashrc"`
+  `ln -s "$HOME/.bashrc_dispatch" "$HOME/.bash_profile"`
+  `ln -s "$HOME/.bashrc_dispatch" "$HOME/.profile"`
+  `ln -s "$HOME/.bashrc_dispatch" "$HOME/.bash_login"`
 end
 
 task :uninstall do

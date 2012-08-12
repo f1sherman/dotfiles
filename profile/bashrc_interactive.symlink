@@ -1,3 +1,5 @@
+# bashrc_interactive: sourced only when interactive (mutually exclusive with bashrc_script)
+
 export EDITOR=mvim # use macvim to edit files
 export ELASTICSEARCH_HOST=127.0.0.1:9200 # run tests against local elasticsearch index
 
