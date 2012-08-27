@@ -29,6 +29,9 @@ defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 # Display full POSIX path as Finder window title
 defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
 
+# Show path bar in Finder
+defaults write com.apple.finder ShowPathbar -bool true
+
 # Avoid creating .DS_Store files on network volumes
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 
