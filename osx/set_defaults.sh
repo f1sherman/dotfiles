@@ -47,6 +47,9 @@ defaults write com.apple.NetworkBrowser BrowseAllInterfaces -bool true
 # Show the ~/Library folder
 chflags nohidden ~/Library
 
+# Show all files (i.e. /tmp, /usr, /var directories) in Finder
+defaults write com.apple.Finder AppleShowAllFiles YES
+
 # Remove the auto-hiding Dock delay
 defaults write com.apple.Dock autohide-delay -float 0
 # Remove the animation when hiding/showing the Dock
