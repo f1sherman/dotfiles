@@ -7,6 +7,7 @@ export CC=gcc-4.2 # use non-broken gcc for lion
 [[ -f ~/.git-completion.sh ]] && source ~/.git-completion.sh
 [[ -f ~/.git-bash-prompt.sh ]] && source ~/.git-bash-prompt.sh
 
+[[ -d ~/bin ]] && export PATH=$HOME/bin:$PATH
 # speed up rails tests
 export RUBY_HEAP_MIN_SLOTS=1000000
 export RUBY_HEAP_SLOTS_INCREMENT=1000000
