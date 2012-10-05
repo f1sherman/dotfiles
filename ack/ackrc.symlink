@@ -4,3 +4,4 @@
 --type-set=sass=sass
 
 --ignore-dir=test/reports
+--ignore-dir=tmp/
