@@ -54,9 +54,8 @@ defaults write com.apple.Finder AppleShowAllFiles YES
 defaults write com.apple.Dock autohide-delay -float 0
 # Remove the animation when hiding/showing the Dock
 defaults write com.apple.dock autohide-time-modifier -float 0
-
-# Enable Safari’s debug menu
-defaults write com.apple.Safari IncludeInternalDebugMenu -bool true
+# Automatically hide and show the Dock
+defaults write com.apple.dock autohide -bool true
 
 # Remove useless icons from Safari’s bookmarks bar
 defaults write com.apple.Safari ProxiesInBookmarksBar "()"
@@ -67,4 +66,32 @@ defaults write com.apple.terminal StringEncodings -array 4
 # Copy email addresses as `foo@example.com` instead of `Foo Bar <foo@example.com>` in Mail.app
 defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false
 
+# Check for software updates every day instead of once a week
+defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
 
+# Disable default backwards scrolling
+defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
+
+# Improve quality for bluetooth headphones and headsets
+defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int 40
+
+# Set timezone; type systemsetup -listtimezones for a list
+systemsetup -settimezone "America/Chicago" > /dev/null
+
+# Save screenshots to Downloads
+defaults write com.apple.screencapture location $HOME/Downloads
+
+# Use list view in all Finder windows by default
+# Four-letter codes for the other view modes: `icnv`, `clmv`, `Flwv`
+defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
+
+# Don’t show Dashboard as a Space
+defaults write com.apple.dock dashboard-in-overlay -bool true
+
+# Enable the Develop menu and the Web Inspector in Safari
+defaults write com.apple.Safari IncludeDevelopMenu -bool true
+defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true
+defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled -bool true
+
+# Add a context menu item for showing the Web Inspector in web views
+defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
