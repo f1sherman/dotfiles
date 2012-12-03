@@ -78,9 +78,6 @@ defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int
 # Set timezone; type systemsetup -listtimezones for a list
 systemsetup -settimezone "America/Chicago" > /dev/null
 
-# Save screenshots to Downloads
-defaults write com.apple.screencapture location $HOME/Downloads
-
 # Use list view in all Finder windows by default
 # Four-letter codes for the other view modes: `icnv`, `clmv`, `Flwv`
 defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
