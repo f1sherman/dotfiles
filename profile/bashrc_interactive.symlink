@@ -18,6 +18,8 @@ export RUBY_HEAP_FREE_MIN=500000
 # View HTTP traffic
 alias sniff="sudo ngrep -d 'en1' -t '^(GET|POST) ' 'tcp and port 80'"
 alias httpdump="sudo tcpdump -i en1 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET \/.*\""
+# Fix solarized theme in tmux
+alias tmux="TERM=screen-256color-bce tmux"
 ### End Alias ###
 
 # Be more intelligent when autocompleting by also looking at the text after
