@@ -1,4 +1,4 @@
-export EDITOR=mvim # use macvim to edit files
+export EDITOR=vim # use vim to edit files
 export ELASTICSEARCH_HOST=127.0.0.1:9200 # run tests against local elasticsearch index
 
 [[ -f ~/.git-completion.sh ]] && source ~/.git-completion.sh
