@@ -33,11 +33,6 @@ set completion-ignore-case on
 # Immediately add a trailing slash when autocompleting symlinks to directories
 set mark-symlinked-directories on
 
-# Load amazon keys ENV vars, if available
-if [[ -f "$HOME/.amazon_keys" ]]; then
-  source "$HOME/.amazon_keys";
-fi
-
 # Autocorrect typos in path names when using `cd`
 shopt -s cdspell
 
