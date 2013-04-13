@@ -36,6 +36,8 @@ set mark-symlinked-directories on
 # Autocorrect typos in path names when using `cd`
 shopt -s cdspell
 
+set -o vi
+
 # Load any machine-specific customizations
 if [ -f ~/.bash_profile.local ]; then
   . ~/.bash_profile.local
