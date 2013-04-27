@@ -9,6 +9,8 @@
 [merge]
   tool = vimdiff
 	conflictstyle = diff3
+[push]
+  default = upstream
 [credential]
 	helper = osxkeychain
 [color]
