@@ -1,5 +1,6 @@
 export EDITOR=vim # use vim to edit files
 export ELASTICSEARCH_HOST=127.0.0.1:9200 # run tests against local elasticsearch index
+export GIT_MERGE_AUTOEDIT=no # Don't require merge commit editing for conflict-free merges, see http://git-blame.blogspot.com/2012/02/updates-to-git-merge-in-upcoming-1710.html
 
 [[ -f ~/.git-completion.sh ]] && source ~/.git-completion.sh
 [[ -f ~/.git-bash-prompt.sh ]] && source ~/.git-bash-prompt.sh
