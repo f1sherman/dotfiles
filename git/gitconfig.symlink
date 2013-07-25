@@ -10,7 +10,7 @@
   tool = vimdiff
 	conflictstyle = diff3
 [push]
-  default = upstream
+  default = simple # when using 'git push' with no refspec push only to the upstream branch (req git >= 1.7.11)
 [credential]
 	helper = osxkeychain
 [color]

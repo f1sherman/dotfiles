@@ -1,10 +1,6 @@
 setw -g mode-keys vi
 set -g mouse-utf8 on
 
-unbind C-b
-set -g prefix M-e
-bind M-e send-prefix
-
 set -sg escape-time 0
 
 bind -n M-\ split-window -h
