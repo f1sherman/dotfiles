@@ -3,3 +3,4 @@ tmp/
 public/i18n
 .git/
 *.log
+public/assets
