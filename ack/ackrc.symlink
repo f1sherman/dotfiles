@@ -6,3 +6,4 @@
 --ignore-dir=test/reports
 --ignore-dir=tmp/
 --ignore-dir=public/i18n
+--ignore-dir=public/assets
