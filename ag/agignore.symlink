@@ -1,3 +1,4 @@
+spec/reports
 test/reports
 tmp/
 public/i18n
