@@ -1,5 +1,4 @@
 setw -g mode-keys vi
-set -g mouse-utf8 on
 
 set -sg escape-time 0
 
@@ -39,8 +38,6 @@ set -g visual-activity on
 set -g set-titles on
 set -g set-titles-string '#S: #W'
 setw -g automatic-rename
-
-set -g mode-mouse on
 
 # copy/paste (requires reattach-to-user-namespace to be installed)
 bind-key -t vi-copy v begin-selection
