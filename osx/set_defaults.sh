@@ -95,3 +95,6 @@ defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
 
 # Disable the dashboard
 defaults write com.apple.dashboard mcx-disabled -boolean true
+
+# Always boot/shutdown in verbose mode
+sudo nvram boot-args="-v"
