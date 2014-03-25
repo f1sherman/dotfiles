@@ -98,3 +98,6 @@ defaults write com.apple.dashboard mcx-disabled -boolean true
 
 # Always boot/shutdown in verbose mode
 sudo nvram boot-args="-v"
+
+# Disable mouse acceleration
+defaults write .GlobalPreferences com.apple.mouse.scaling -1
