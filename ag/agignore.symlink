@@ -3,5 +3,5 @@ test/reports
 tmp/
 public/i18n
 .git/
-*.log
+**/*.log
 public/assets
