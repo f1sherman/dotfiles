@@ -1,5 +1,5 @@
-spec/reports
-test/reports
+spec/reports/*
+test/reports/*
 tmp/
 public/i18n
 .git/
