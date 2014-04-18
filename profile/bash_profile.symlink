@@ -1,17 +1,10 @@
 export EDITOR=vim # use vim to edit files
-export ELASTICSEARCH_HOST=127.0.0.1:9200 # run tests against local elasticsearch index
 export GIT_MERGE_AUTOEDIT=no # Don't require merge commit editing for conflict-free merges, see http://git-blame.blogspot.com/2012/02/updates-to-git-merge-in-upcoming-1710.html
 
 [[ -f ~/.git-completion.sh ]] && source ~/.git-completion.sh
 [[ -f ~/.git-bash-prompt.sh ]] && source ~/.git-bash-prompt.sh
 
 [[ -d ~/bin ]] && export PATH=$HOME/bin:$PATH
-# speed up rails tests
-export RUBY_HEAP_MIN_SLOTS=1000000
-export RUBY_HEAP_SLOTS_INCREMENT=1000000
-export RUBY_HEAP_SLOTS_GROWTH_FACTOR=1
-export RUBY_GC_MALLOC_LIMIT=1000000000
-export RUBY_HEAP_FREE_MIN=500000
 
 ### Alias ###
 # View HTTP traffic
@@ -43,8 +36,6 @@ set -o emacs
 if [ -f ~/.bash_profile.local ]; then
   . ~/.bash_profile.local
 fi
-
-[ -f ~/.bundler-exec.sh ] && source ~/.bundler-exec.sh # prepend commands with 'bundle exec' when appropriate
 
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi # enable shims and autocompletion for rbenv
 
