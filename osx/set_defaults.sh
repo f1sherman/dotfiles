@@ -1,9 +1,6 @@
 # Exec this file to set many helpful defaults in OS X
 # Most of this came from https://github.com/mathiasbynens/dotfiles/blob/master/.osx
 
-# Show remaining battery time
-defaults write com.apple.menuextra.battery ShowTime -string "YES"
-
 # Disable the “Are you sure you want to open this application?” dialog
 defaults write com.apple.LaunchServices LSQuarantine -bool false
 
@@ -103,8 +100,7 @@ sudo nvram boot-args="-v"
 defaults write .GlobalPreferences com.apple.mouse.scaling -1
 
 # Show battery percentage in menu bar
-defaults write com.apple.menuextra.battery ShowPercent -string "NO"
-defaults write com.apple.menuextra.battery ShowTime -string "YES"
+defaults write com.apple.menuextra.battery ShowPercent -string "YES"
 
 # Disable the sound effects on boot
 sudo nvram SystemAudioVolume=" "
