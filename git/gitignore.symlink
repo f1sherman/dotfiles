@@ -1,5 +1,3 @@
 .sass-cache
 *.un~
 config/jshint.yml
-bin/spring
-bin/rspec
