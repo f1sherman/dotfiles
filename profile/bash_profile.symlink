@@ -1,9 +1,6 @@
 export EDITOR=vim # use vim to edit files
 export GIT_MERGE_AUTOEDIT=no # Don't require merge commit editing for conflict-free merges, see http://git-blame.blogspot.com/2012/02/updates-to-git-merge-in-upcoming-1710.html
 
-[[ -f ~/.git-completion.sh ]] && source ~/.git-completion.sh
-[[ -f ~/.git-bash-prompt.sh ]] && source ~/.git-bash-prompt.sh
-
 [[ -d ~/bin ]] && export PATH=$HOME/bin:$PATH
 
 ### Alias ###
@@ -30,6 +27,7 @@ set mark-symlinked-directories on
 # Autocorrect typos in path names when using `cd`
 shopt -s cdspell
 
+# Use emacs mode at the command line
 set -o emacs
 
 # Load any machine-specific customizations
@@ -37,4 +35,35 @@ if [ -f ~/.bash_profile.local ]; then
   . ~/.bash_profile.local
 fi
 
+# Setup git completion and git bash prompt
+GIT_COMPLETION_DIRECTORY="$(brew --prefix)/Cellar/git/$(git --version | cut -d ' ' -f 3)/etc/bash_completion.d"
+
+if [ -d "$GIT_COMPLETION_DIRECTORY" ]; then
+  source "$GIT_COMPLETION_DIRECTORY/git-completion.bash"
+  source "$GIT_COMPLETION_DIRECTORY/git-prompt.sh"
+  GIT_PS1_SHOWDIRTYSTATE=true
+  GIT_PS1_SHOWSTASHSTATE=true
+  GIT_PS1_SHOWUNTRACKEDFILES=true
+else
+  echo "Warning: unable to find git completion directory, git bash completion and prompt will not work"
+fi
+
+export PROMPT_COMMAND=__prompt
+
+function __prompt() {
+  local LAST_EXIT="$?"
+  PS1=""
+
+  local REGULAR="\[\e[0m\]"
+  local RED='\[\e[0;31m\]'
+
+  # Make the prompt red if the last command failed
+  if [ "$LAST_EXIT" != 0 ]; then
+    PS1+="${RED}"
+  fi
+    
+  PS1+="\w$(__git_ps1 " (%s)")\$${REGULAR} "
+}
+
+# Setup rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi # enable shims and autocompletion for rbenv
