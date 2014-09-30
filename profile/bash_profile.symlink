@@ -44,6 +44,7 @@ if [ -d "$GIT_COMPLETION_DIRECTORY" ]; then
   GIT_PS1_SHOWDIRTYSTATE=true
   GIT_PS1_SHOWSTASHSTATE=true
   GIT_PS1_SHOWUNTRACKEDFILES=true
+  GIT_PS1_SHOWUPSTREAM="auto"
 else
   echo "Warning: unable to find git completion directory, git bash completion and prompt will not work"
 fi
