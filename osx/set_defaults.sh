@@ -66,6 +66,10 @@ defaults write com.apple.Safari ProxiesInBookmarksBar "()"
 # Only use UTF-8 in Terminal.app
 defaults write com.apple.terminal StringEncodings -array 4
 
+# Set the Pro theme by default in Terminal.app
+defaults write com.apple.Terminal "Default Window Settings" -string "Pro"
+defaults write com.apple.Terminal "Startup Window Settings" -string "Pro"
+
 # Copy email addresses as `foo@example.com` instead of `Foo Bar <foo@example.com>` in Mail.app
 defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false
 
@@ -98,6 +102,9 @@ defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
 
 # Disable the dashboard
 defaults write com.apple.dashboard mcx-disabled -boolean true
+
+# Disable motion sensor since it's not needed for SSDs
+sudo pmset -a sms 0
 
 # Always boot/shutdown in verbose mode
 sudo nvram boot-args="-v"
@@ -133,6 +140,9 @@ defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
 
 # Add the keyboard shortcut ⌘ + Enter to send an email in Mail.app
 defaults write com.apple.mail NSUserKeyEquivalents -dict-add "Send" -string "@\\U21a9"
+
+# Allow text selection in Quick Look/Preview in Finder by default
+defaults write com.apple.finder QLEnableTextSelection -bool true
 
 # Setup menubar
 defaults write com.apple.systemuiserver menuExtras -array "/Applications/Utilities/Keychain Access.app/Contents/Resources/Keychain.menu" "/System/Library/CoreServices/Menu Extras/Bluetooth.menu" "/System/Library/CoreServices/Menu Extras/AirPort.menu" "/System/Library/CoreServices/Menu Extras/Volume.menu" "/System/Library/CoreServices/Menu Extras/Battery.menu" "/System/Library/CoreServices/Menu Extras/Clock.menu" "/System/Library/CoreServices/Menu Extras/User.menu"
