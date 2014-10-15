@@ -30,6 +30,10 @@ shopt -s cdspell
 # Use emacs mode at the command line
 set -o emacs
 
+# Convenience functions for encrypting and decrypting files
+encrypt() { openssl des3 -salt -in $1 -out $1.enc; }
+decrypt() { openssl des3 -d -salt -in $1 -out `echo $1 | sed -e 's/\.enc$//'`; }
+
 # Load any machine-specific customizations
 if [ -f ~/.bash_profile.local ]; then
   . ~/.bash_profile.local
