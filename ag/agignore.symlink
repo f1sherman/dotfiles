@@ -7,3 +7,5 @@ public/i18n/*
 */*/*.log
 public/assets
 public/assets/*
+public/assets-test
+public/assets-test/*
