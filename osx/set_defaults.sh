@@ -32,6 +32,10 @@ defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
 # Show path bar in Finder
 defaults write com.apple.finder ShowPathbar -bool true
 
+# Set Downloads as the default location for new Finder windows
+defaults write com.apple.finder NewWindowTarget -string "PfLo"
+defaults write com.apple.finder NewWindowTargetPath -string "file://${HOME}/Downloads/"
+
 # Avoid creating .DS_Store files on network volumes
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 
