@@ -1,44 +1,44 @@
 [user]
-	name = Brian John
-	email = brian@brianjohn.com
+  name = Brian John
+  email = brian@brianjohn.com
 [github]
   user = f1sherman
 [core]
   excludesfile = ~/.gitignore
-	editor = vim
+  editor = vim
 [merge]
   tool = vimdiff
-	conflictstyle = diff3
+  conflictstyle = diff3
 [push]
   default = simple # when using 'git push' with no refspec push only to the upstream branch (req git >= 1.7.11)
 [credential]
-	helper = osxkeychain
+  helper = osxkeychain
 [color]
-	branch = auto
-	diff = auto
-	status = auto
-	ui = auto
+  branch = auto
+  diff = auto
+  status = auto
+  ui = auto
 [diff]
-	renames = copy
-	tool = vimdiff
+  renames = copy
+  tool = vimdiff
   guitool = mvimdiff
 [status]
-	showUntrackedFiles = all
+  showUntrackedFiles = all
 [alias]
   c = commit -m             # commit with a message
   ca = commit -am           # commit all files with a message
   co = checkout             # checkout
-	d = difftool
+  d = difftool
   ds = diff --cached        # diff staged changes
   dl = diff HEAD^           # diff last commit
   pl = pull                 # pull
   ps = push                 # push
   
   publish = !BRANCH=$(git branch | grep \\* | awk '{print $2}') && git push -u origin $BRANCH
-	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+  lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 [difftool]
-	prompt = false
+  prompt = false
 [difftool "mvimdiff"]
   cmd = mvim -d --nofork -R -o $LOCAL $REMOTE
 [init]
-	templatedir = ~/.git_template
+  templatedir = ~/.git_template
