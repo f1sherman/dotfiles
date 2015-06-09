@@ -10,6 +10,9 @@ sudo defaults write /Library/Preferences/.GlobalPreferences AppleInterfaceTheme 
 defaults write NSGlobalDomain AppleShowScrollBars -string "Always"
 # Possible values: `WhenScrolling`, `Automatic` and `Always`
 
+# Disable the sound effects on boot
+sudo nvram SystemAudioVolume=" "
+
 # Increase window resize speed for Cocoa applications
 defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
 
