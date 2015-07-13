@@ -3,8 +3,7 @@ test/reports/*
 tmp/
 public/i18n/*
 .git/
-*/*.log
-*/*/*.log
+*.log
 public/assets
 public/assets/*
 public/assets-test
