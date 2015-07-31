@@ -1,8 +1,22 @@
 # vi:filetype=sh
 # vi:syntax=sh
 
-export EDITOR=vim # use vim to edit files
-export GIT_MERGE_AUTOEDIT=no # Don't require merge commit editing for conflict-free merges, see http://git-blame.blogspot.com/2012/02/updates-to-git-merge-in-upcoming-1710.html
+# use vim to edit files
+export EDITOR=vim 
+
+# Don't require merge commit editing for conflict-free merges, see http://git-blame.blogspot.com/2012/02/updates-to-git-merge-in-upcoming-1710.html
+export GIT_MERGE_AUTOEDIT=no 
+
+# Increase bash history
+export HISTSIZE='32768';
+export HISTFILESIZE="${HISTSIZE}"
+
+# Use UTF-8
+export LANG='en_US.UTF-8'
+export LC_ALL='en_US.UTF-8'
+
+# Enable colors in grep
+export GREP_OPTIONS='--color=auto'
 
 [[ -d ~/bin ]] && export PATH=$HOME/bin:$PATH
 
