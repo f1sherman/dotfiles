@@ -21,6 +21,9 @@ export GREP_OPTIONS='--color=auto'
 # Enable colors in ls
 export CLICOLOR='true'
 
+# Use solorized colors in ls
+export LSCOLORS='gxfxbEaEBxxEhEhBaDaCaD'
+
 [[ -d ~/bin ]] && export PATH=$HOME/bin:$PATH
 
 ### Alias ###
