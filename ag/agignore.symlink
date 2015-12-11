@@ -7,6 +7,7 @@ public/i18n
 public/i18n/*
 .git/
 *.log
+log/*
 public/assets
 public/assets/*
 public/assets-test
