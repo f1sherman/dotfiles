@@ -235,6 +235,9 @@ defaults write com.apple.finder OpenWindowForNewRemovableDisk -bool true
 # Show the ~/Library folder
 chflags nohidden ~/Library
 
+# Show the /Volumes folder
+sudo chflags nohidden /Volumes
+
 ###############################################################################
 # Dock, Dashboard, and hot corners                                            #
 ###############################################################################
