@@ -42,3 +42,5 @@
   cmd = mvim -d --nofork -R -o $LOCAL $REMOTE
 [init]
   templatedir = ~/.git_template
+[rerere]
+	enabled = true
