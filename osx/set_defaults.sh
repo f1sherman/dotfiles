@@ -270,6 +270,9 @@ defaults write com.apple.dock showhidden -bool true
 # Show only open applications in the Dock
 defaults write com.apple.dock static-only -bool true
 
+# Spaces span displays instead of having separate spaces per display
+defaults write com.apple.spaces spans-displays -bool TRUE
+
 ###############################################################################
 # Safari & WebKit                                                             #
 ###############################################################################
