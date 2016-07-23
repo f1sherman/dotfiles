@@ -22,6 +22,7 @@
   renames = copy
   tool = vimdiff
   guitool = mvimdiff
+	compactionHeuristic = true
 [status]
   showUntrackedFiles = all
 [alias]
