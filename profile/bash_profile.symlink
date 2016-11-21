@@ -101,5 +101,8 @@ if [ -f ~/.bashrc ]; then
   source ~/.bashrc
 fi
 
+# Load SSH keys into the keychain - http://stackoverflow.com/a/39715149/961521
+ssh-add -A 2>/dev/null;
+
 # Setup rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi # enable shims and autocompletion for rbenv
