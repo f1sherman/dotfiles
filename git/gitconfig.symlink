@@ -22,7 +22,7 @@
   renames = copy
   tool = vimdiff
   guitool = mvimdiff
-	compactionHeuristic = true
+	indentHeuristic = true
 [status]
   showUntrackedFiles = all
 [alias]
