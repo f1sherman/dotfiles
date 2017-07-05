@@ -61,6 +61,9 @@ set -o emacs
 encrypt() { openssl des3 -salt -in "$1" -out "$1.enc"; }
 decrypt() { openssl des3 -d -salt -in "$1" -out "${1//\.enc/}"; }
 
+# Use ag for FZF for speed and to respect .gitignore, .ignore
+export FZF_DEFAULT_COMMAND='ag -g ""'
+
 # Load any machine-specific customizations
 if [ -f ~/.bash_profile.local ]; then
   . ~/.bash_profile.local
