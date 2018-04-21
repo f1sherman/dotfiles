@@ -21,6 +21,7 @@
 [credential]
   helper = osxkeychain
 [diff]
+  colorMoved = plain
   guitool = mvimdiff
 	indentHeuristic = true
   renames = copy
