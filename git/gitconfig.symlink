@@ -1,30 +1,3 @@
-[user]
-  name = Brian John
-  email = brian@brianjohn.com
-[github]
-  user = f1sherman
-[core]
-  excludesfile = ~/.gitignore
-  editor = vim
-[merge]
-  tool = vimdiff
-  conflictstyle = diff3
-[push]
-  default = simple # when using 'git push' with no refspec push only to the upstream branch (req git >= 1.7.11)
-[credential]
-  helper = osxkeychain
-[color]
-  branch = auto
-  diff = auto
-  status = auto
-  ui = auto
-[diff]
-  renames = copy
-  tool = vimdiff
-  guitool = mvimdiff
-	indentHeuristic = true
-[status]
-  showUntrackedFiles = all
 [alias]
   c = commit -m             # commit with a message
   ca = commit -am           # commit all files with a message
@@ -37,11 +10,36 @@
   
   publish = !BRANCH=$(git branch | grep \\* | awk '{print $2}') && git push -u origin $BRANCH
   lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+[color]
+  branch = auto
+  diff = auto
+  status = auto
+  ui = auto
+[core]
+  excludesfile = ~/.gitignore
+  editor = vim
+[credential]
+  helper = osxkeychain
+[diff]
+  guitool = mvimdiff
+	indentHeuristic = true
+  renames = copy
+  tool = vimdiff
 [difftool]
   prompt = false
-[difftool "mvimdiff"]
-  cmd = mvim -d --nofork -R -o $LOCAL $REMOTE
+[github]
+  user = f1sherman
 [init]
   templatedir = ~/.git_template
+[merge]
+  conflictstyle = diff3
+  tool = vimdiff
+[push]
+  default = simple # when using 'git push' with no refspec push only to the upstream branch (req git >= 1.7.11)
 [rerere]
 	enabled = true
+[status]
+  showUntrackedFiles = all
+[user]
+  email = brian@brianjohn.com
+  name = Brian John
