@@ -36,6 +36,8 @@ alias portscan="nmap -Pn -p1-65535"
 alias tmux="TERM=screen-256color-bce tmux"
 # Shortcut for updating
 alias update='bash <(curl -fsSL https://raw.githubusercontent.com/f1sherman/new-machine-bootstrap/master/osx.sh)'
+# Shortcut for viewing diffs
+alias d='git d'
 ### End Alias ###
 
 # Be more intelligent when autocompleting by also looking at the text after
