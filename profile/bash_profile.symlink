@@ -35,7 +35,7 @@ alias portscan="nmap -Pn -p1-65535"
 # Fix solarized theme in tmux
 alias tmux="TERM=screen-256color-bce tmux"
 # Shortcut for updating
-alias update='bash <(curl -fsSL https://raw.githubusercontent.com/f1sherman/new-machine-bootstrap/master/osx.sh)'
+alias update='ruby <(curl -fsSL https://raw.githubusercontent.com/f1sherman/new-machine-bootstrap/master/macos)'
 # Shortcut for viewing diffs
 alias d='git d'
 ### End Alias ###

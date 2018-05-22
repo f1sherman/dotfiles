@@ -2,6 +2,3 @@
 Pry.config.exception_handler = proc do |output, exception, _pry_|
   _pry_.run_command 'cat --ex'
 end
-
-require 'awesome_print'
-AwesomePrint.pry!
