@@ -85,6 +85,11 @@ else
   echo "Warning: unable to find git completion directory, git bash completion and prompt will not work"
 fi
 
+# Search the current bundle
+bgrep() {
+  ag "$@" $(bundle show --paths)
+}
+
 export PROMPT_COMMAND=__prompt
 
 function __prompt() {
