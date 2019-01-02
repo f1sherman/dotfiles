@@ -1,6 +1,9 @@
 # vi:filetype=sh
 # vi:syntax=sh
 
+(( SOURCED_BASH_PROFILE )) && return
+export SOURCED_BASH_PROFILE=1
+
 # use vim to edit files
 export EDITOR=vim 
 
