@@ -64,8 +64,8 @@ shopt -s cdspell
 set -o emacs
 
 # Print cheatsheet for a command
-function cheat() {
-  curl cht.sh/$1
+cheat() {
+  curl cht.sh/"${1}"
 }
 
 # Check which process uses port 
