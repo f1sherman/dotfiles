@@ -67,6 +67,12 @@ set -o emacs
 function cheat() {
   curl cht.sh/$1
 }
+
+# Check which process uses port 
+port() {
+  lsof -i tcp:"${1}"
+}
+
 # Convenience functions for encrypting and decrypting files
 encrypt() { openssl des3 -salt -in "$1" -out "$1.enc"; }
 decrypt() { openssl des3 -d -salt -in "$1" -out "${1//\.enc/}"; }
