@@ -38,6 +38,10 @@ alias tmux="TERM=screen-256color-bce tmux"
 alias update='ruby <(curl -fsSL https://raw.githubusercontent.com/f1sherman/new-machine-bootstrap/master/macos)'
 # Shortcut for viewing diffs
 alias d='git d'
+# Shortcut for git status
+alias s='git status'
+# Show Disk Use of subdirectories, sort by size
+alias duss="du -d 1 -h | sort -hr | egrep -v ^0"
 ### End Alias ###
 
 # Be more intelligent when autocompleting by also looking at the text after
@@ -59,6 +63,10 @@ shopt -s cdspell
 # Use emacs mode at the command line
 set -o emacs
 
+# Print cheatsheet for a command
+function cheat() {
+  curl cht.sh/$1
+}
 # Convenience functions for encrypting and decrypting files
 encrypt() { openssl des3 -salt -in "$1" -out "$1.enc"; }
 decrypt() { openssl des3 -d -salt -in "$1" -out "${1//\.enc/}"; }
