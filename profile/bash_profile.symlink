@@ -24,8 +24,6 @@ export CLICOLOR='true'
 # Use solorized colors in ls
 export LSCOLORS='gxfxbEaEBxxEhEhBaDaCaD'
 
-[[ -d ~/bin ]] && export PATH=$HOME/bin:$PATH
-
 ### Alias ###
 # View HTTP traffic
 alias sniff="sudo ngrep -d 'en1' -t '^(GET|POST) ' 'tcp and port 80'"
@@ -76,6 +74,16 @@ port() {
 # Convenience functions for encrypting and decrypting files
 encrypt() { openssl des3 -salt -in "$1" -out "$1.enc"; }
 decrypt() { openssl des3 -d -salt -in "$1" -out "${1//\.enc/}"; }
+
+# Add to path avoiding duplicates
+pathadd() {
+  local newdir=${1%/}
+  if [ -d "${1}" ] && ! echo "${PATH}" | grep --extended-regexp --quiet "(^|:)$newdir($|:)"; then
+    PATH="${newdir}:${PATH}"
+  fi
+}
+
+pathadd "${HOME}/bin"
 
 # Use ag for FZF for speed and to respect .gitignore, .ignore
 export FZF_DEFAULT_COMMAND='ag -g ""'
