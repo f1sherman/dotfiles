@@ -1,3 +1,4 @@
+#!/bin/bash
 # vi:filetype=sh
 # vi:syntax=sh
 
@@ -90,6 +91,7 @@ export FZF_DEFAULT_COMMAND='ag -g ""'
 
 # Load any machine-specific customizations
 if [ -f ~/.bash_profile.local ]; then
+  # shellcheck disable=SC1090
   . ~/.bash_profile.local
 fi
 
@@ -97,18 +99,21 @@ fi
 GIT_COMPLETION_DIRECTORY="/usr/local/etc/bash_completion.d"
 
 if [ -d "$GIT_COMPLETION_DIRECTORY" ]; then
+  # shellcheck disable=SC1090
   source "$GIT_COMPLETION_DIRECTORY/git-completion.bash"
+  # shellcheck disable=SC1090
   source "$GIT_COMPLETION_DIRECTORY/git-prompt.sh"
-  GIT_PS1_SHOWDIRTYSTATE=true
-  GIT_PS1_SHOWSTASHSTATE=true
-  GIT_PS1_SHOWUNTRACKEDFILES=true
-  GIT_PS1_SHOWUPSTREAM="auto"
+  export GIT_PS1_SHOWDIRTYSTATE=true
+  export GIT_PS1_SHOWSTASHSTATE=true
+  export GIT_PS1_SHOWUNTRACKEDFILES=true
+  export GIT_PS1_SHOWUPSTREAM="auto"
 else
   echo "Warning: unable to find git completion directory, git bash completion and prompt will not work"
 fi
 
 # Search the current bundle
 bgrep() {
+  # shellcheck disable=SC2046
   ag "$@" $(bundle show --paths)
 }
 
@@ -130,6 +135,7 @@ function __prompt() {
 }
 
 if [ -f ~/.bashrc ]; then
+  # shellcheck disable=SC1090
   source ~/.bashrc
 fi
 
@@ -140,8 +146,9 @@ ssh-add -A 2>/dev/null;
 if [ -d "${NVM_DIR}" ]; then
   export NVM_DIR="$HOME/.nvm"
   [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+  # shellcheck disable=SC1091
   [ -s "/usr/local/opt/nvm/etc/bash_completion" ] && . "/usr/local/opt/nvm/etc/bash_completion"  # This loads nvm bash_completion
 fi
 
 # Setup rbenv
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi # enable shims and autocompletion for rbenv
+if command -v rbenv > /dev/null; then eval "$(rbenv init -)"; fi # enable shims and autocompletion for rbenv
