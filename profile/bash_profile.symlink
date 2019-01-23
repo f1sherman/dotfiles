@@ -143,7 +143,7 @@ fi
 ssh-add -A 2>/dev/null;
 
 # Install NVM
-if [ -d "${NVM_DIR}" ]; then
+if [ -z "${NVM_DIR}" ]; then
   export NVM_DIR="$HOME/.nvm"
   [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
   # shellcheck disable=SC1091
