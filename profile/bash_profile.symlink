@@ -37,8 +37,6 @@ alias lstcp="lsof -i TCP -P"
 alias tmux="TERM=screen-256color-bce tmux"
 # Shortcut for updating
 alias update='ruby <(curl -fsSL https://raw.githubusercontent.com/f1sherman/new-machine-bootstrap/master/macos)'
-# Shortcut for listing branches
-alias b='git branch'
 # Shortcut for committing
 alias c='git commit'
 # Shortcut for viewing diffs
@@ -93,6 +91,14 @@ pathadd() {
 }
 
 pathadd "${HOME}/bin"
+
+# Switch branches using fzf
+b() {
+  local branches branch
+  branches=$(git --no-pager branch) &&
+  branch=$(echo "$branches" | fzf +m) &&
+  git checkout "$(echo "${branch}" | awk '{print $1}' | sed "s/.* //")"
+}
 
 # Use ag for FZF for speed and to respect .gitignore, .ignore
 export FZF_DEFAULT_COMMAND='ag -g ""'
