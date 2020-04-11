@@ -100,8 +100,8 @@ b() {
   git checkout "$(echo "${branch}" | awk '{print $1}' | sed "s/.* //")"
 }
 
-# Use ag for FZF for speed and to respect .gitignore, .ignore
-export FZF_DEFAULT_COMMAND='ag -g ""'
+# Use rg for FZF for speed and to respect .gitignore, .ignore
+export FZF_DEFAULT_COMMAND='rg --files'
 
 # Load any machine-specific customizations
 if [ -f ~/.bash_profile.local ]; then
@@ -128,7 +128,7 @@ fi
 # Search the current bundle
 bgrep() {
   # shellcheck disable=SC2046
-  ag "$@" $(bundle show --paths)
+  rg "$@" $(bundle show --paths)
 }
 
 export PROMPT_COMMAND=__prompt
