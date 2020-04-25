@@ -151,3 +151,5 @@ fi
 
 # Setup rbenv
 if command -v rbenv > /dev/null; then eval "$(rbenv init -)"; fi # enable shims and autocompletion for rbenv
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
