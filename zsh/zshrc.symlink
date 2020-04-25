@@ -87,14 +87,6 @@ pathadd() {
 
 pathadd "${HOME}/bin"
 
-# Switch branches using fzf
-b() {
-  local branches branch
-  branches=$(git --no-pager branch) &&
-  branch=$(echo "$branches" | fzf +m) &&
-  git checkout "$(echo "${branch}" | awk '{print $1}' | sed "s/.* //")"
-}
-
 # Use rg for FZF for speed and to respect .gitignore, .ignore
 export FZF_DEFAULT_COMMAND='rg --files'
 
@@ -159,3 +151,12 @@ fi
 
 # Shortcut for pushing
 alias p='git publish'
+
+# Switch branches using fzf
+unalias b
+function b() {
+  local branches branch
+  branches=$(git --no-pager branch) &&
+  branch=$(echo "$branches" | fzf +m) &&
+  git checkout "$(echo "${branch}" | awk '{print $1}' | sed "s/.* //")"
+}
