@@ -21,6 +21,7 @@
 [credential]
   helper = osxkeychain
 [diff]
+  algorithm = patience
   colorMoved = plain
   guitool = mvimdiff
 	indentHeuristic = true
